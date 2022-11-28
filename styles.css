@@ -1,20 +1,102 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body {
+    margin: 0;
+    padding: 0;
     background-color: #333;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
 }
 
-button {
-    padding: 1rem;
-    font-size: x-large;
+.title {
+    color: white;
+    font-size: 40px;
+    display: grid;
+    justify-content: center;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 90vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.container > button {
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+}
+
+.container .operator, .container .number {
+    background-color: #AEDFD6;
+}
+
+.container .btnEqual {
+    background-color: #7fffd4;
+}
+
+.container .btnEqual:hover {
+    background-color: #AEDFD6;
 }
 
 .operator:hover,
 .number:hover {
     cursor: pointer;
+    background-color: #7fffd4;
+}
+
+.container > .btnDouble {
+    grid-column: span 2;
+}
+
+.displayScreen {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .4);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    color: white;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.displayScreen .previousNumber {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+.displayScreen .currentNumber {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 43%;
+    color: white;
 }
 
 /*  Media Queries  */
+
+@media (max-width: 800px) {
+    .container {
+        grid-template-columns: repeat(4, 91px);
+        grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+        position: absolute;
+        top: 10%;
+        left: 3%;
+    }
+
+    .footer {
+        left: 15%;
+    }
+}

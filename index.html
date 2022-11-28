@@ -5,11 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./img/Calculator.png">
     <title>Calculator</title>
 </head>
 <body>
+    <h1 class="title">Calculator</h1>
     <div class="container">
-        <div class="displayScreen"></div>
+        <div class="displayScreen">
+            <div class="previousNumber"></div>
+            <div class="currentNumber"></div>
+        </div>
         <button class="operator btnDouble">AC</button>
         <button class="operator">&larr;</button>
         <button class="operator">÷</button>
@@ -27,8 +32,10 @@
         <button class="operator">-</button>
         <button class="operator">.</button>
         <button class="number">0</button>
-        <button class="number">00</button>
-        <button class="operator btnDouble">=</button>
+        <button class="operator btnDouble btnEqual">=</button>
     </div>
+    <footer class="footer">
+        <span>&copy; 2022 | All rights reserved by Tyler.</span>
+    </footer>
 </body>
 </html>
