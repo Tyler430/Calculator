@@ -70,12 +70,12 @@ body {
 
 .displayScreen .previousNumber {
     color: rgba(255, 255, 255, .75);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .displayScreen .currentNumber {
     color: white;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .footer {
