@@ -31,22 +31,16 @@ body {
     background-color: rgba(255, 255, 255, .75);
 }
 
-.container .operator, .container .number {
-    background-color: #AEDFD6;
-}
-
-.container .btnEqual {
-    background-color: #7fffd4;
-}
-
-.container .btnEqual:hover {
-    background-color: #AEDFD6;
+.container .operator, .container .number, .container .btnEqual {
+    background-color: #444444;
+    color: white;
 }
 
 .operator:hover,
-.number:hover {
+.number:hover,
+.btnEqual:hover {
     cursor: pointer;
-    background-color: #7fffd4;
+    background-color: #555555;
 }
 
 .container > .btnDouble {
@@ -68,14 +62,20 @@ body {
     border-top-right-radius: 10px;
 }
 
+.resultLeft {
+    position: relative;
+    right: 85%;
+    bottom: 10px;
+}
+
 .displayScreen .previousNumber {
     color: rgba(255, 255, 255, .75);
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .displayScreen .currentNumber {
     color: white;
-    font-size: 2rem;
+    font-size: 1.3rem;
 }
 
 .footer {
